@@ -5,6 +5,8 @@ $color-blue-pale: hsl(225, 100%, 98%);
 $color-blue-desaturated: hsl(224, 23%, 55%);
 $color-blue-dark: hsl(223, 47%, 23%);
 
+$bp-1: 31.25em; // 500px
+
 *,
 *::after,
 *::before {
@@ -17,6 +19,10 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   color-scheme: dark light;
+
+  @media only screen and (max-width: $bp-1) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -28,10 +34,19 @@ body {
   background: url(../images/pattern-background-desktop.svg),
     linear-gradient($color-primary-1, $color-primary-1);
   background-repeat: no-repeat;
+  background-size: 100%;
   background-position: 0% -20%;
 
   display: grid;
   place-items: center;
+
+  @media only screen and (max-width: $bp-1) {
+    background: url(../images/pattern-background-mobile.svg),
+      linear-gradient($color-primary-1, $color-primary-1);
+    background-position: 50% 40%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
 }
 
 img,
@@ -95,7 +110,7 @@ video {
   }
 
   &__change:hover {
-    color: rgba($color-primary-2, 0.8);
+    color: rgba($color-primary-2, 0.6);
   }
 
   &__btn {
