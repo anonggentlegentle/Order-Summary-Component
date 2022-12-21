@@ -1,0 +1,108 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  color-scheme: dark light;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.6rem;
+  background: url(../images/pattern-background-desktop.svg), linear-gradient(hsl(225deg, 100%, 94%), hsl(225deg, 100%, 94%));
+  background-repeat: no-repeat;
+  background-position: 0% -20%;
+  display: grid;
+  place-items: center;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: 90%;
+  max-width: 40rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background-color: white;
+  color: hsl(224deg, 23%, 55%);
+}
+.container__bottom {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2rem;
+}
+.container__heading-1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: hsl(223deg, 47%, 23%);
+}
+.container__details {
+  text-align: center;
+}
+.container__plan {
+  width: 100%;
+  border-radius: 1rem;
+  background-color: hsl(225deg, 100%, 98%);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+.container__heading-2 {
+  font-size: 1.6rem;
+  color: hsl(223deg, 47%, 23%);
+}
+.container__change:link, .container__change:visited {
+  font-size: 1.4rem;
+  margin-left: auto;
+  color: hsl(245deg, 75%, 52%);
+  transition: all 0.2s;
+}
+.container__change:hover {
+  color: rgba(56, 41, 224, 0.8);
+}
+.container__btn {
+  border: none;
+  font-family: "Red Hat Display", sans-serif;
+  color: white;
+  background-color: hsl(245deg, 75%, 52%);
+  align-self: stretch;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.container__btn:hover {
+  background-color: rgba(56, 41, 224, 0.8);
+}
+.container__cancel:link, .container__cancel:visited {
+  color: hsl(224deg, 23%, 55%);
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+.container__cancel:hover {
+  color: hsl(223deg, 47%, 23%);
+}
+
+/*# sourceMappingURL=style.css.map */

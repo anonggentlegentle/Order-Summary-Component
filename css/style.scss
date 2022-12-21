@@ -1,0 +1,130 @@
+$color-primary-1: hsl(225, 100%, 94%);
+$color-primary-2: hsl(245, 75%, 52%);
+
+$color-blue-pale: hsl(225, 100%, 98%);
+$color-blue-desaturated: hsl(224, 23%, 55%);
+$color-blue-dark: hsl(223, 47%, 23%);
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  color-scheme: dark light;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.6rem;
+  background: url(../images/pattern-background-desktop.svg),
+    linear-gradient($color-primary-1, $color-primary-1);
+  background-repeat: no-repeat;
+  background-position: 0% -20%;
+
+  display: grid;
+  place-items: center;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: 90%;
+  max-width: 40rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background-color: white;
+  color: $color-blue-desaturated;
+
+  &__bottom {
+    padding: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2rem;
+  }
+
+  &__heading-1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: $color-blue-dark;
+  }
+
+  &__details {
+    text-align: center;
+  }
+
+  &__plan {
+    width: 100%;
+    border-radius: 1rem;
+    background-color: $color-blue-pale;
+    padding: 1.5rem;
+
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+  }
+
+  &__heading-2 {
+    font-size: 1.6rem;
+    color: $color-blue-dark;
+  }
+
+  &__change:link,
+  &__change:visited {
+    font-size: 1.4rem;
+    margin-left: auto;
+    color: $color-primary-2;
+    transition: all 0.2s;
+  }
+
+  &__change:hover {
+    color: rgba($color-primary-2, 0.8);
+  }
+
+  &__btn {
+    border: none;
+    font-family: "Red Hat Display", sans-serif;
+    color: white;
+    background-color: $color-primary-2;
+    align-self: stretch;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: rgba($color-primary-2, 0.8);
+    }
+  }
+
+  &__cancel:link,
+  &__cancel:visited {
+    color: $color-blue-desaturated;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.2s;
+  }
+
+  &__cancel:hover {
+    color: $color-blue-dark;
+  }
+}
